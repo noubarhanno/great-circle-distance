@@ -7,7 +7,7 @@ import { isFloat } from "utils/validators";
 import NearbyFinderForm, { TNearbyFieldsName } from "./form";
 import NearbyFinderList, { IPartners } from "./list";
 
-const List: React.FC = () => {
+const NearbyFinder: React.FC = () => {
   const { dispatch } = useConfigContext();
   const [partnersList, setPartnersList] = useState<IPartners[]>();
   const [meetingCoordinates, setMeetingCoordinates] = useState({
@@ -61,4 +61,4 @@ const List: React.FC = () => {
   );
 };
 
-export default List;
+export default NearbyFinder;

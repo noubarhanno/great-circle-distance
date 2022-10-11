@@ -15,6 +15,7 @@ const Button: React.FC<ButtonProps> = ({ children, isLoading, ...rest }) => {
           sx={{ width: "25px !important", height: "25px !important" }}
           color={rest.color}
           variant="indeterminate"
+          data-testid="button-spinner"
         />
       ) : (
         children

@@ -16,8 +16,15 @@ const ThemeModeController: React.FC<ThemeModeControllerProps> = () => {
   }, [state, dispatch]);
 
   return (
-    <IconButton onClick={changeSwitchThemeHandler}>
-      {state.themeMode === "dark" ? <LightMode /> : <DarkMode />}
+    <IconButton
+      onClick={changeSwitchThemeHandler}
+      data-testid="change-theme-button"
+    >
+      {state.themeMode === "dark" ? (
+        <LightMode data-testid="light-mode-icon" />
+      ) : (
+        <DarkMode data-testid="dark-mode-icon" />
+      )}
     </IconButton>
   );
 };

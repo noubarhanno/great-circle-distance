@@ -49,7 +49,7 @@ class Partners {
 
 export default Partners;
 
-const data = [
+export const data = [
   {
     id: 1,
     urlName: "balance-at-work",

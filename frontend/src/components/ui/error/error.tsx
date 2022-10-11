@@ -21,6 +21,7 @@ const Error: React.FC<ErrorProps> = ({ children }) => {
     <Box
       component="div"
       margin="auto"
+      data-testid="error-component"
       // sx - use this to add styles directly to the component
     >
       {!!error && (
@@ -28,6 +29,7 @@ const Error: React.FC<ErrorProps> = ({ children }) => {
           open={!!error}
           onCloseSnackbar={onCloseSnackbar}
           severity="error"
+          data-testid="snackbar-error"
         >
           {error}
         </Snackbar>

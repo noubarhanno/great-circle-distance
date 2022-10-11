@@ -102,6 +102,7 @@ const NearbyFinderForm: React.FC<NearbyFinderProps> = ({
           color="primary"
           type="submit"
           isLoading={isLoading}
+          data-testid="submit-button"
         >
           Get nearby partners
         </Button>

@@ -15,7 +15,11 @@ const Snackbar: React.FC<SnackbarProps> = ({
       open={open}
       onClose={onCloseSnackbar}
     >
-      <Alert {...rest} onClose={onCloseSnackbar as any}>
+      <Alert
+        data-testid="snackbar-alert"
+        {...rest}
+        onClose={onCloseSnackbar as any}
+      >
         {children}
       </Alert>
     </MuiSnackbar>

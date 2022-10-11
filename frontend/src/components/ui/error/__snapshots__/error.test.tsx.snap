@@ -1,0 +1,10 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Error test suite should match snopshot 1`] = `
+<div>
+  <div
+    class="MuiBox-root css-42igfv"
+    data-testid="error-component"
+  />
+</div>
+`;
