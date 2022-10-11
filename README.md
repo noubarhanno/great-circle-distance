@@ -31,3 +31,11 @@ A full stack solution for calculating the great circle distance between two poin
 
 - The web application is a simple form that takes three inputs the latitude and longitude of the meeting location and the distance to find the nearby partners. The latitude and longitude are in degrees and the distance is in kilometers.
 - The API is a simple REST API that takes three query latitude, longitude and range - ready the list of the partners from a JSON file using lowdb a lightweight JSON database. Then it filters the partners using the great circle distance formula and returns the list of the partners that are within the given range.
+
+## Testing
+
+- The API is tested using jest.
+- The web application is tested using jest and react testing library.
+- to run tests:
+  - cd `backend` then run `yarn test`
+  - cd `frontend` then run `yarn test`
