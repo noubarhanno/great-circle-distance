@@ -44,15 +44,25 @@ class GreateCircleDistance {
     lat2: number,
     lon2: number
   ): number {
-    const dLat = this.calculateDegreesToRadians(lat2 - lat1); // deg2rad below
-    const dLon = this.calculateDegreesToRadians(lon2 - lon1);
-    const a =
-      Math.sin(dLat / 2) * Math.sin(dLat / 2) +
-      Math.cos(this.calculateDegreesToRadians(lat1)) *
-        Math.cos(this.calculateDegreesToRadians(lat2)) *
-        Math.sin(dLon / 2) *
-        Math.sin(dLon / 2);
-    const c = 2 * Math.atan2(Math.sqrt(a), Math.sqrt(1 - a));
+    // convert the degrees to radians
+    const lat1Radians = this.calculateDegreesToRadians(lat1);
+    const lat2Radians = this.calculateDegreesToRadians(lat2);
+    const lon1Radians = this.calculateDegreesToRadians(lon1);
+    const lon2Radians = this.calculateDegreesToRadians(lon2);
+
+    // harvesine formula
+    // https://en.wikipedia.org/wiki/Haversine_formula
+    const dLat = lat2Radians - lat1Radians;
+    const dLon = lon2Radians - lon1Radians;
+    const lat1Cos = Math.cos(lat1Radians);
+    const lat2Cos = Math.cos(lat2Radians);
+    // calculate hav(x) -- haversine of x - latitude
+    const havLat = Math.pow(Math.sin(dLat / 2), 2);
+    // calculate hav(y) -- haversine of y - longitude
+    const havLon = Math.pow(Math.sin(dLon / 2), 2);
+    const a = havLat + lat1Cos * lat2Cos * havLon;
+    // calculate c -- great circle distance in radians - 2r * arcsin(sqrt(a))
+    const c = 2 * Math.asin(Math.sqrt(a));
     const d = this.earthRadius * c; // Distance in km
     return d;
   }
