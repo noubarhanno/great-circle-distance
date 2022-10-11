@@ -7,7 +7,7 @@ export type TNetworkResponse = {
   success?: boolean;
 };
 
-export type TMethods = "GET" | "POST" | "DELETE" | "PUT";
+export type TMethods = "POST" | "GET";
 
 class Network {
   BaseUrl: string;
@@ -46,6 +46,19 @@ class Network {
   }): Promise<AxiosResponse<TNetworkResponse, TNetworkResponse>> => {
     this.init();
     return this.client.get(url, { params: data, ...config });
+  };
+
+  public post = async ({
+    url,
+    config,
+    data,
+  }: {
+    url: string;
+    data?: any;
+    config?: any;
+  }): Promise<AxiosResponse<TNetworkResponse, TNetworkResponse>> => {
+    this.init();
+    return this.client.post(url, data, config);
   };
 
   // add other methods here

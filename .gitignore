@@ -3,6 +3,7 @@
 /backend/dist
 /backend/db.sqlite
 /backend/.env
+/backend/public
 
 #frontend
 /frontend/node_modules

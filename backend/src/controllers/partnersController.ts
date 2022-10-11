@@ -24,7 +24,7 @@ export const getNearbyPartners = async (
         lon,
         range
       );
-      res.status(200).json({ partners: nearbyPartners, success: true });
+      res.status(200).json({ data: nearbyPartners, success: true });
     } else {
       res.status(400).json({
         success: false,

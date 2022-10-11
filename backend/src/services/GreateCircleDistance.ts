@@ -3,6 +3,9 @@ import { IPartners } from "../models/partners";
 class GreateCircleDistance {
   // add constructor here to initialize the class with different args
 
+  /**
+   * @description - https://en.wikipedia.org/wiki/Earth_radius
+   */
   private readonly earthRadius: number = 6371;
 
   /**
@@ -33,6 +36,7 @@ class GreateCircleDistance {
    * @param lat2  latitude of second point
    * @param lon2  longitude of second point
    * @returns {number} distance between two points in km
+   * @description  the formula used is in: https://en.wikipedia.org/wiki/Great-circle_distance
    */
   public calculateDistance(
     lat1: number,

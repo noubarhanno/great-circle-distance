@@ -25,14 +25,14 @@ const configureTheme: (options?: TConfigureThemeParams) => Theme = (
         }
       : {
           primary: {
-            light: "#3c2782",
-            main: "#000054",
-            dark: "#00002c",
+            light: "#926be6",
+            main: "#5f3fb3",
+            dark: "#2a1482",
           },
           secondary: {
-            light: "#63fff8",
-            main: "#00cbc5",
-            dark: "#009995",
+            light: "#aaffff",
+            main: "#71ffff",
+            dark: "#2dcbcc",
           },
         };
   return createTheme({
