@@ -1,5 +1,6 @@
 {
     "scripts": {
         "dev": "cd ./frontend && yarn install && yarn prepare && cd ../backend && yarn install && yarn dev"
-    }
+    },
+    "version": "1.0.0"
 }
